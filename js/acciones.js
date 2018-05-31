@@ -49,7 +49,7 @@ function onDeviceReady(){
 	   
 	   }
 	   
-	   var watchID=navigator.geolocation.watchtPosition(onSuccess, onError,options);
+	   var watchID=navigator.geolocation.watchPosition(onSuccess, onError,options);
 	   function onSuccess(position){
 		 
 		$('#latitud    ').html(position.coords.latitude);
