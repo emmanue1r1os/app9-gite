@@ -11,7 +11,7 @@ function onDeviceReady(){
 		getPosition ();
 	});
 	
-   $('#watch').('click',function(){
+   $('#watch').on('click',function(){
 		watchPosition ();
 	});
 	
@@ -23,7 +23,7 @@ function onDeviceReady(){
 	   maximumAge: 3600000
 	   }
 	   
-	   var watchID=navigator.geolocation.getCurrentPosition(onSuccess, onError,options);
+	   var watchID=navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
 	   function onSuccess(position){
 		   
 		   alert('Latitude:'    +position.coords.latitude    +'\n' +
@@ -49,7 +49,7 @@ function onDeviceReady(){
 	   
 	   }
 	   
-	   var watchID=navigator.geolocation.getCurrentPosition(onSuccess, onError,options);
+	   var watchID=navigator.geolocation.watchtPosition(onSuccess, onError,options);
 	   function onSuccess(position){
 		 
 		$('#latitud    ').html(position.coords.latitude);
