@@ -7,7 +7,7 @@ $(document).ready(function(e) {
 
 function onDeviceReady(){
 	
-	$('#posicion').('click',function(){
+	$('#posicion').on('click',function(){
 		getPosition ();
 	});
 	
